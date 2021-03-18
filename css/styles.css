@@ -1,0 +1,61 @@
+/*crearemos ciertas variables para colores*/
+
+
+*{
+    box-sizing: border-box;
+    margin: auto;
+    padding: auto;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+}
+
+header{
+    
+}
+
+main{
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+
+.menubox{
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    padding: 5px 5px;
+    background-color: beige;
+}
+
+.product-detail--title{
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.product-detail--title h2{
+    margin-bottom: 15 px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: black;
+}
+
+.menu--detail--card{
+    width:40%;
+    min-width: 150px;
+    max-width: 300px;
+    height: 100px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: lightblue;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+}
