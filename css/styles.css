@@ -1,61 +1,191 @@
-/*crearemos ciertas variables para colores*/
-
-
-*{
-    box-sizing: border-box;
-    margin: auto;
-    padding: auto;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-
-html{
-    font-size: 62.5%;
-    font-family: 'DM Sans', sans-serif;
+ 
+.contenedor {
+	background:#ccc;
+	width:100%;
+	max-width:1400px;
+	margin:auto;
+ 
+	/* Flexbox */
+	display:flex;
+	flex-flow:row wrap;
 }
-
-header{
-    
+ 
+body {
+	background: white;
 }
-
-main{
-    width: 100%;
-    height: auto;
-    background-color: white;
+ 
+header {
+	background: white;
+	width:100%;
+	padding:20px;
+ 
+	/* Flexbox */
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+ 
+	flex-direction:row;
+	flex-wrap:wrap;
 }
-
-.menubox{
-    position: relative;
-    width: 100%;
-    min-width: 320px;
-    height: auto;
-    padding: 5px 5px;
-    background-color: beige;
+ 
+header .logo {
+	color:#fff;
+	font-size:30px;
 }
-
-.product-detail--title{
-    width: 90%;
-    min-width: 288px;
-    height: auto;
-    margin: 0 auto;
-    margin-top: 30px;
-    text-align: center;
+ 
+header .logo img {
+	width:50px;
+	vertical-align: top;
 }
-
-.product-detail--title h2{
-    margin-bottom: 15 px;
-    font-size: 2.4rem;
-    font-weight: bold;
-    line-height: 2.6rem;
-    color: black;
+ 
+header .logo a {
+	color:black;
+	text-decoration: none;
+	line-height:50px;
 }
+ 
+header nav {
+	width:50%;
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+}
+ 
+header nav a {
+	background: rgba(1, 168, 1, 0.726);
+	color:#fff;
+	text-align: center;
+	text-decoration: none;
+	padding:10px;
+	flex-grow:1;
+}
+ 
+header nav a:hover {
+	background:rgb(0, 98, 0);
+}
+ 
+.main {
+	background: white;
+	padding:20px;
+	flex:1 1 70%;
+    height: 660px;
 
-.menu--detail--card{
-    width:40%;
-    min-width: 150px;
-    max-width: 300px;
-    height: 100px;
-    margin: 10px auto;
-    padding: 10px;
-    background-color: lightblue;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+}
+ 
+.main article {
+	margin-bottom: 20px;
+	padding-bottom:20px;
+	border-bottom:1px solid white;
+}
+ 
+.main article:nth-last-child(1){
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom:none;
+}
+ 
+aside {
+	background:white;
+	padding:20px;
+	flex:1 1 30%;
+	display: flex;
+	flex-wrap:wrap;
+	flex-direction:column;
+	justify-content:flex-start;
+}
+ 
+aside .widget {
+	background: rgba(1, 168, 1, 0.37);
+	height:300px;
+	margin:10px;
+    border-radius: 15px;
+}
+aside .chico{
+	background:rgba(1, 168, 1, 0.37);
+	height:150px;
+	margin:10px;
+    border-radius: 15px;
+}
+ 
+ 
+footer {
+	background: white;
+	width: 100%;
+	padding:20px;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+ 
+footer .links {
+	background:rgba(1, 168, 1, 0.726);
+	display:flex;
+	flex-wrap:wrap;
+}
+ 
+footer .links a {
+	flex-grow:1;
+ 
+	color:#fff;
+	padding:10px;
+	text-align: center;
+	text-decoration:none;
+}
+ 
+footer .links a:hover {
+	background:rgb(0, 98, 0);
+}
+ 
+footer .social {
+	background:rgba(1, 168, 1, 0.726);
+}
+ 
+footer .social a {
+	color:#fff;
+	text-decoration: none;
+	padding:10px;
+	display: inline-block;
+}
+ 
+@media screen and (max-width: 800px) {
+	.contenedor {
+		flex-direction:column;
+	}
+ 
+	header {
+		flex-direction:column;
+		padding:0;
+	}
+ 
+	header .logo {
+		margin:20px 0;
+	}
+ 
+	header nav {
+		width: 100%;
+	}
+ 
+	aside {
+		flex-direction:row;
+		flex:0;
+	}
+ 
+	aside .widget {
+		flex-grow:1;
+	}
+}
+ 
+@media screen and (max-width: 600px) {
+	aside {
+		flex-direction:column;
+	}
+ 
+	footer {
+		justify-content:space-around;
+	}
 }
